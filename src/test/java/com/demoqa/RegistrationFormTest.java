@@ -20,11 +20,12 @@ public class RegistrationFormTest {
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
         Configuration.browserCapabilities = capabilities;
     }
+
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
-        Configuration.pageLoadStrategy="eager";
+        Configuration.pageLoadStrategy = "eager";
     }
 
     @Test
@@ -32,7 +33,6 @@ public class RegistrationFormTest {
         open("/automation-practice-form");
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
-
 
         $("#firstName").setValue("Salma");
         $("#lastName").setValue("Hayek");
